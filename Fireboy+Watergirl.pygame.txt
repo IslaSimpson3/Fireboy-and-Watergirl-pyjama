@@ -1,0 +1,27 @@
+import pygame 
+from pygame.locals import *
+    
+pygame.init()   
+screen_width = 1000
+screen_height = 650
+
+screen = pygame.display.set_mode((screen_width, screen_height)) 
+pygame.display.set_caption('Platformer')
+
+bg_img = pygame.image.load('./jungleBackground.png')
+
+run = True
+while run:  # code of game keeps looping
+    screen.blit(bg_img, (0, 0))  # shows background image onto the screen
+    # iceCube.update()
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:  # closes the game
+            run = False
+
+    pygame.display.flip()  # update the display
+
+pygame.quit()
+
+
+
+
